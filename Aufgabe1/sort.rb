@@ -1,3 +1,4 @@
+#encoding: utf-8
 require "./tools"
 
 def sort1(list)
@@ -46,7 +47,7 @@ end
 MAX_RAND = 1000000
 def demo(samples)
   data  = Array.new(samples) { rand MAX_RAND }
-  benchmark(data, "sort1") {sort1 data}
+  #benchmark(data, "sort1") {sort1 data}
   benchmark(data, "sort2") {sort2 data}
 end
 
