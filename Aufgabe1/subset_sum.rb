@@ -20,7 +20,7 @@ def demo(samples)
   cpu_time
 end
 
-s = 1
+s = 0
 begin
   time = demo(s+=1)
 end while time < 30
