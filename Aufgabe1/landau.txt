@@ -1,0 +1,37 @@
+f3(n) = 2^75 000,
+f1(n) = log(log(n)),
+f6(n) = log(log(2^n)) = log(2log(n)),
+f12(n) = log(n),
+f9(n) = n/2,
+f11(n) = log(n^n) = n log(n),
+f2(n) = n + n = 2n,
+f4(n) = 2n,
+f5(n) = n log(n^2) = 2n log(n),
+f13(n) = n^2,
+f10(n) = 1,5^n n^15 log(n)^23,
+f8(n) = 2^n n^3 log(n)^2,
+f7(n) = 2^n n^2 log(n)^3,
+
+sort1(Bubblesort)
+Der Algorithmus iteriert über die Eingabeliste von links nach rechts und vergleicht im jeden Schritt das aktuelle Element mit dem Nachfolgenden. Wenn der vorherige Element großer ist, dann wechselt er die beiden.
+Das wird für jedes Element wiederholt(von rechts nach links). Sortierte Menge bildet sich immer von rechts.
+
+sort2(Quicksort)
+Der Algorithmus teilt die Eingabeliste in zwei Listen, sortiert sie rekursiv und führt die sortierte Listen zusammen.
+Das Zusammenführen funktioniert wie folgt:
+Es wird über die linke und rechte Liste gleichzeitig iteriert, in jedem Schritt wird das kleinere Element aus den akuellen Elementen ausgewählt und in eine neue Liste eingefügt.
+Wenn die Schleife nicht alle Elemente aus den Listen bearbeitet hat, werden sie anschließend der neuen Liste hinzugefügt.
+
+sort1 Komplexität
+2 verschaltelte Schleifen iterieren über n Elemente im worst case. n*n
+O(n^2)
+
+Im best case wird eine Schleife nur über das erste Element iterieren. n*1
+O(n)
+
+
+sort2 Komplexität
+Sortierfunktion wird 1 + 2 lb(n) mal aufgerufen.
+Zusammenführen iteriert über 2n Elemente und wird bei Sortierfunktionen aufgerufen.
+1 + 2 lb(n) + 2n = 1 + 4n lb(n)
+O(n log(n))
