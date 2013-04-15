@@ -1,13 +1,6 @@
 #encoding: utf-8
 require "./tools"
-
-def subset_sum(set, s)
-  return true   if s == 0
-  return false  if set.empty?
-
-  subset = set[1...set.size]
-  subset_sum(subset, s - set.first) or subset_sum(subset, s)
-end
+require "./algorithms"
 
 MAX_RAND = 1000000
 def demo(samples)
